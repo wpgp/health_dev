@@ -1,14 +1,29 @@
-Constructing a subnational reproductive, maternal, newborn, child and
-adolescent health and development atlas for India
+health_dev: Subnational reproductive, maternal, newborn, child and
+adolescent health and development atlas for India, version 1.0
 ================
-Ho Man Theophilus Chan
-2022-06-26
-
-GitHub repository: health_dev (Version: 1.0)
+2022-07-24
 
 ------------------------------------------------------------------------
 
-## Script for modelling the health and development indicators - modelling.R
+**Table 1.** Files and their descriptions within the health_dev GitHub
+repository for the paper Subnational reproductive, maternal, newborn,
+child, and adolescent health and development atlas for India.
+
+| Name       | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                  |
+|------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| out        | Folder | Folder contain the prediction and uncertainty gridded datasets (raster files) produced from the prediction R script and the out- of-sample cross validation summary statistics (csv files) from the validation R script.                                                                                                                                                                                     |
+| rda        | Folder | Folder to contain INLA objects and the model summary statistics (saved as rda files) produced from the modelling R script. Files within this folder will be required to run the prediction and validation R scripts.                                                                                                                                                                                         |
+| shp        | Folder | This folder contains the shapefiles required to run all R scripts in this repository. These should be the administrative boundaries of the study area as polygons and the location of the clusters in the study area as points (lat/lon) These shapefiles can be obtained from the DHS program at www.dhsprogram.com.                                                                                        |
+| tif        | Folder | This folder contains the raster files for all geospatial covariates. Files within this folder are required to run the prediction R script. Examples of geospatial covariate datasets can be found at www.hub.worldpop.org/project/categories?id=14.                                                                                                                                                          |
+| covariates | csv    | This file contains a demo of the format of the data extracted from geospatial covariates considered when modelling the health and development indicators. This file is required to run all R scripts in this repository. Examples of geospatial covariate datasets can be found from <https://hub.worldpop.org/project/categories?id=14>.                                                                    |
+| indicators | csv    | This file contains a demo of health and development indicators to model. This file is required to run all R scripts in this repository. The indicators were extracted from the India NFHS-4 (National Family Health Survey 4) 2015-16 DHS (Demographic Health Survey) (1-3) database, which are publicly available after registration onto the Measure DHS website (www.dhsprogram.com).                     |
+| modelling  | R      | R script for modelling the health and development indicators. The files required to run this script are the covariates and indicator csv files and the files in the shp folder. This script outputs an INLA object and the model summary statistics (both saved as rda files). Further description of the methodology is given in the sections below.                                                        |
+| prediction | R      | R script for predicting the health and development indicators. The files required to run this script are the covariates and indicators csv files, the files in the shp folder, the files in the tif folder, and the files in the rda folder. This script outputs a prediction gridded dataset (tif file) and an uncertainty gridded dataset (tif file) for target indicator and are saved to the out folder. |
+| validation | R      | R script for out-of-sample (k- fold) validation for the models of the health and development indicators. The files required to run this script are the covariates and indicators csv files, the files in the shp folder, and the files in the rda folder. This script outputs k- fold summary statistics as csv files. Further description of the methodology is given in the sections below                 |
+
+------------------------------------------------------------------------
+
+# Script for modelling the health and development indicators - modelling.R
 
 The geospatial covariate selection is two-staged. In the first stage, we
 check for multicollinearity amongst the geospatial covariates. In the
@@ -130,9 +145,7 @@ object, INLA stack “A” matrices are created and stacked with the INLA
 stack functions. Finally, these components, along with the model are
 fitted into the INLA function.
 
-------------------------------------------------------------------------
-
-## Script for predicting the health and development indicators – prediction.R
+# Script for predicting the health and development indicators – prediction.R
 
 The prediction R script loads the generates posterior samples from the
 INLA object (saved from the modelling R script). Then it reads in the
@@ -144,9 +157,7 @@ slotted to the cells in the raster file – producing the high-resolution
 (5x5km) prediction and uncertainty gridded datasets / surfaces as tif
 files.
 
-------------------------------------------------------------------------
-
-## Script for validating the models constructed for health and development indicators – validation.R
+# Script for validating the models constructed for health and development indicators – validation.R
 
 The validation R script accesses the performance of the model
 constructed for the target indicator from the modelling R script with
@@ -260,23 +271,39 @@ validated.
 
 ------------------------------------------------------------------------
 
-## Usage
+# Acknowledement
 
-Usage of the modelling, prediction and validation R scripts are
-documented within their respective files. The main functions to run are
-the following
+The work is funded by the Children’s Investment Foundation Fund (CIFF).
+The authors acknowledge the support of the PMO Team at WorldPop and
+would like to thank EME and India Programme Team at CIFF for their
+inputs and continuous support, and all staff at CIFF who provided
+feedback at each stage of this work. Moreover, the authors would like to
+thank the DHS Program staff for their input on the construction of some
+of the indicators.
 
-``` r
-modelling(keyword)
-prediction(keyword)
-validation(keyword, k)
-```
+# Suggested citation
 
-The argument `keyword` should be supplied with a health and development
-indicator. The list of available indicator are provided in all R
-scripts. The argument `k` in the `validation()` function specifies the
-number of folds to run in the k-fold cross validation.
+Chan, H.M.T, Dreoni, I., Tejedor-Garavito, N., Kerr D., Bonnie, A.,
+Tatem A.J. and Pezzulo, C. 2022. health_dev: Subnational reproductive,
+maternal, newborn, child and adolescent health and development atlas for
+India, version 1.0. WorldPop, University of Southampton. doi: XXX.
+
+# Reference
+
+1.  International Institute for Population Sciences - IIPS/India and
+    ICF. \[Producers\]. 2017. National Family Health Survey NFHS-4,
+    \[Datasets IABR74DT.dta; IACR74DT.dta; IAHR74DT.dta; IAIR74DT.dta;
+    IAKR74DT.dta; IAMR74DT.dta; IAPR74DT.dta; IAGE71FL.shp\], 2015-16:
+    India. Mumbai: IIPS. ICF \[Distributor\], 2017. 6 International
+    Institute for Population Sciences - IIPS/India and ICF. 2017.
+    National Family Health Survey NFHS-4, 2015-16: India. Mumbai: IIPS.
+    (www.dhsprogram.com)
+2.  International Institute for Population Sciences (IIPS), I. and ICF.,
+    India National Family Health Survey NFHS-4 2015-16. Mumbai, India:
+    IIPS and ICF. Available at
+    <http://dhsprogram.com/pubs/pdf/FR339/FR339.pdf>. 2017
+3.  The DHS Program Code Share Project, Code Library, DHS Program. DHS
+    Program Github site. <https://github.com/DHSProgram>., in DHS
+    Program Github site. 2022.
 
 ------------------------------------------------------------------------
-
-## Suggested citation
