@@ -1,7 +1,7 @@
 health_dev: Subnational reproductive, maternal, newborn, child and
 adolescent health and development atlas for India, version 1.0
 ================
-2022-07-24
+2022-07-25
 
 ------------------------------------------------------------------------
 
@@ -273,13 +273,15 @@ validated.
 
 # Acknowledement
 
-The work is funded by the Children’s Investment Foundation Fund (CIFF).
-The authors acknowledge the support of the PMO Team at WorldPop and
-would like to thank EME and India Programme Team at CIFF for their
-inputs and continuous support, and all staff at CIFF who provided
-feedback at each stage of this work. Moreover, the authors would like to
-thank the DHS Program staff for their input on the construction of some
-of the indicators.
+The work is funded by the Children’s Investment Foundation Fund (CIFF)
+(R-2009-05106). The authors acknowledge the support of the PMO Team at
+WorldPop and would like to thank EME and India Programme Team at CIFF
+for their inputs and continuous support, and all staff at CIFF who
+provided feedback at each stage of this work. Moreover, the authors
+would like to thank the DHS Program staff for their input on the
+construction of some of the indicators. This work was approved by the
+ethics and research governance committee at the University of
+Southampton (ERGO 64920).
 
 # Suggested citation
 
