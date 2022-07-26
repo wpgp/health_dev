@@ -1,7 +1,7 @@
 health_dev: Subnational reproductive, maternal, newborn, child and
 adolescent health and development atlas for India, version 1.0
 ================
-2022-07-25
+2022-07-26
 
 ------------------------------------------------------------------------
 
@@ -58,81 +58,69 @@ GLM in INLA.
 The constructed Bayesian point-referenced spatial binomial GLM is given
 as follows.
 
-![
-\\begin{align\*}
-Y(\\mathbf{s}\_i)\|m(\\mathbf{s}\_i) &\\sim    \\textrm{Binomial}(m(\\mathbf{s}\_i), p(\\mathbf{s}\_i)), \\nonumber \\\\
-\\textrm{logit}(p(\\mathbf{s}\_i)) &= \\mathbf{x}(\\mathbf{s}\_i)\\boldsymbol{\\beta} + \\omega(\\mathbf{s}\_i) + \\epsilon(\\mathbf{s}\_i).
-\\end{align\*}
-](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%0A%5Cbegin%7Balign%2A%7D%0AY%28%5Cmathbf%7Bs%7D_i%29%7Cm%28%5Cmathbf%7Bs%7D_i%29%20%26%5Csim%20%20%20%20%5Ctextrm%7BBinomial%7D%28m%28%5Cmathbf%7Bs%7D_i%29%2C%20p%28%5Cmathbf%7Bs%7D_i%29%29%2C%20%5Cnonumber%20%5C%5C%0A%5Ctextrm%7Blogit%7D%28p%28%5Cmathbf%7Bs%7D_i%29%29%20%26%3D%20%5Cmathbf%7Bx%7D%28%5Cmathbf%7Bs%7D_i%29%5Cboldsymbol%7B%5Cbeta%7D%20%2B%20%5Comega%28%5Cmathbf%7Bs%7D_i%29%20%2B%20%5Cepsilon%28%5Cmathbf%7Bs%7D_i%29.%0A%5Cend%7Balign%2A%7D%0A "
-\begin{align*}
+![\begin{align\*}
+Y(\mathbf{s}\_i)\|m(\mathbf{s}\_i) &\sim    \textrm{Binomial}(m(\mathbf{s}\_i), p(\mathbf{s}\_i)), \nonumber \\\\
+\textrm{logit}(p(\mathbf{s}\_i)) &= \mathbf{x}(\mathbf{s}\_i)\boldsymbol{\beta} + \omega(\mathbf{s}\_i) + \epsilon(\mathbf{s}\_i).
+\end{align\*}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbegin%7Balign%2A%7D%0AY%28%5Cmathbf%7Bs%7D_i%29%7Cm%28%5Cmathbf%7Bs%7D_i%29%20%26%5Csim%20%20%20%20%5Ctextrm%7BBinomial%7D%28m%28%5Cmathbf%7Bs%7D_i%29%2C%20p%28%5Cmathbf%7Bs%7D_i%29%29%2C%20%5Cnonumber%20%5C%5C%0A%5Ctextrm%7Blogit%7D%28p%28%5Cmathbf%7Bs%7D_i%29%29%20%26%3D%20%5Cmathbf%7Bx%7D%28%5Cmathbf%7Bs%7D_i%29%5Cboldsymbol%7B%5Cbeta%7D%20%2B%20%5Comega%28%5Cmathbf%7Bs%7D_i%29%20%2B%20%5Cepsilon%28%5Cmathbf%7Bs%7D_i%29.%0A%5Cend%7Balign%2A%7D "\begin{align*}
 Y(\mathbf{s}_i)|m(\mathbf{s}_i) &\sim    \textrm{Binomial}(m(\mathbf{s}_i), p(\mathbf{s}_i)), \nonumber \\
 \textrm{logit}(p(\mathbf{s}_i)) &= \mathbf{x}(\mathbf{s}_i)\boldsymbol{\beta} + \omega(\mathbf{s}_i) + \epsilon(\mathbf{s}_i).
-\end{align*}
-")
+\end{align*}")
 
-![
-\\begin{align\*}
-&\\omega(\\mathbf{s}\_i) \\sim N_n(\\boldsymbol{0}, \\Sigma\_\\omega), \\\\
-&\\Sigma\_\\omega = \\sigma^2\_{\\omega}\\exp(-\\phi D).
-\\end{align\*}
-](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%0A%5Cbegin%7Balign%2A%7D%0A%26%5Comega%28%5Cmathbf%7Bs%7D_i%29%20%5Csim%20N_n%28%5Cboldsymbol%7B0%7D%2C%20%5CSigma_%5Comega%29%2C%20%5C%5C%0A%26%5CSigma_%5Comega%20%3D%20%5Csigma%5E2_%7B%5Comega%7D%5Cexp%28-%5Cphi%20D%29.%0A%5Cend%7Balign%2A%7D%0A "
-\begin{align*}
+![\begin{align\*}
+&\omega(\mathbf{s}\_i) \sim N_n(\boldsymbol{0}, \Sigma\_\omega), \\\\
+&\Sigma\_\omega = \sigma^2\_{\omega}\exp(-\phi D).
+\end{align\*}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbegin%7Balign%2A%7D%0A%26%5Comega%28%5Cmathbf%7Bs%7D_i%29%20%5Csim%20N_n%28%5Cboldsymbol%7B0%7D%2C%20%5CSigma_%5Comega%29%2C%20%5C%5C%0A%26%5CSigma_%5Comega%20%3D%20%5Csigma%5E2_%7B%5Comega%7D%5Cexp%28-%5Cphi%20D%29.%0A%5Cend%7Balign%2A%7D "\begin{align*}
 &\omega(\mathbf{s}_i) \sim N_n(\boldsymbol{0}, \Sigma_\omega), \\
 &\Sigma_\omega = \sigma^2_{\omega}\exp(-\phi D).
-\end{align*}
-")
+\end{align*}")
 
-![
-\\epsilon(\\mathbf{s}\_i) \\sim N(0, \\sigma^2\_\\epsilon)
-](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%0A%5Cepsilon%28%5Cmathbf%7Bs%7D_i%29%20%5Csim%20N%280%2C%20%5Csigma%5E2_%5Cepsilon%29%0A "
-\epsilon(\mathbf{s}_i) \sim N(0, \sigma^2_\epsilon)
-")
+![\epsilon(\mathbf{s}\_i) \sim N(0, \sigma^2\_\epsilon)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cepsilon%28%5Cmathbf%7Bs%7D_i%29%20%5Csim%20N%280%2C%20%5Csigma%5E2_%5Cepsilon%29 "\epsilon(\mathbf{s}_i) \sim N(0, \sigma^2_\epsilon)")
 
 The number of occurrence of events of the target indicator
-![Y(\\mathbf{s}\_i)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y%28%5Cmathbf%7Bs%7D_i%29 "Y(\mathbf{s}_i)")
+![Y(\mathbf{s}\_i)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;Y%28%5Cmathbf%7Bs%7D_i%29 "Y(\mathbf{s}_i)")
 within cluster locations
-![\\mathbf{s}\_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmathbf%7Bs%7D_i "\mathbf{s}_i")
+![\mathbf{s}\_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmathbf%7Bs%7D_i "\mathbf{s}_i")
 for
-![i = 1, \\dots, n](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;i%20%3D%201%2C%20%5Cdots%2C%20n "i = 1, \dots, n")
+![i = 1, \dots, n](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;i%20%3D%201%2C%20%5Cdots%2C%20n "i = 1, \dots, n")
 follows a Binomial distribution with the total number of surveys
 conducted within the cluster locations
-![m(\\mathbf{s}\_i)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;m%28%5Cmathbf%7Bs%7D_i%29 "m(\mathbf{s}_i)")
+![m(\mathbf{s}\_i)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;m%28%5Cmathbf%7Bs%7D_i%29 "m(\mathbf{s}_i)")
 and the proportion of events happening in the cluster
-![p(\\mathbf{s}\_i)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;p%28%5Cmathbf%7Bs%7D_i%29 "p(\mathbf{s}_i)").
+![p(\mathbf{s}\_i)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;p%28%5Cmathbf%7Bs%7D_i%29 "p(\mathbf{s}_i)").
 With a logit link,
-![p(\\mathbf{s}\_i)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;p%28%5Cmathbf%7Bs%7D_i%29 "p(\mathbf{s}_i)")
+![p(\mathbf{s}\_i)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;p%28%5Cmathbf%7Bs%7D_i%29 "p(\mathbf{s}_i)")
 is calculated with a linear combination of the fixed effects
-![\\mathbf{x}(\\mathbf{s}\_i)\\boldsymbol{\\beta}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmathbf%7Bx%7D%28%5Cmathbf%7Bs%7D_i%29%5Cboldsymbol%7B%5Cbeta%7D "\mathbf{x}(\mathbf{s}_i)\boldsymbol{\beta}"),
+![\mathbf{x}(\mathbf{s}\_i)\boldsymbol{\beta}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmathbf%7Bx%7D%28%5Cmathbf%7Bs%7D_i%29%5Cboldsymbol%7B%5Cbeta%7D "\mathbf{x}(\mathbf{s}_i)\boldsymbol{\beta}"),
 spatial random effects
-![\\omega(\\mathbf{s}\_i)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Comega%28%5Cmathbf%7Bs%7D_i%29 "\omega(\mathbf{s}_i)")
+![\omega(\mathbf{s}\_i)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Comega%28%5Cmathbf%7Bs%7D_i%29 "\omega(\mathbf{s}_i)")
 and independent identical (iid) random effects
-![\\epsilon(\\mathbf{s}\_i)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cepsilon%28%5Cmathbf%7Bs%7D_i%29 "\epsilon(\mathbf{s}_i)").
+![\epsilon(\mathbf{s}\_i)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cepsilon%28%5Cmathbf%7Bs%7D_i%29 "\epsilon(\mathbf{s}_i)").
 
 The fixed effects are given by the geospatial covariates
-![\\mathbf{x}(\\mathbf{s}\_i)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmathbf%7Bx%7D%28%5Cmathbf%7Bs%7D_i%29 "\mathbf{x}(\mathbf{s}_i)")
+![\mathbf{x}(\mathbf{s}\_i)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmathbf%7Bx%7D%28%5Cmathbf%7Bs%7D_i%29 "\mathbf{x}(\mathbf{s}_i)")
 selected from the backward model selection algorithm mentioned above and
-![\\boldsymbol{\\beta}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cboldsymbol%7B%5Cbeta%7D "\boldsymbol{\beta}")
+![\boldsymbol{\beta}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cboldsymbol%7B%5Cbeta%7D "\boldsymbol{\beta}")
 is a vector of regression coefficients to be estimated. The spatial
 random effects follow a multivariate normal distribution with zero-mean
 and some covariance matrix
-![\\Sigma\_\\omega](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5CSigma_%5Comega "\Sigma_\omega").
+![\Sigma\_\omega](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5CSigma_%5Comega "\Sigma_\omega").
 In this study, elements of the covariance matrix are calculated with the
 exponential covariance function. The exponential covariance function is
 calculated with the spatial variance
-![\\sigma^2\_\\omega](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csigma%5E2_%5Comega "\sigma^2_\omega"),
+![\sigma^2\_\omega](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csigma%5E2_%5Comega "\sigma^2_\omega"),
 the spatial decay parameter
-![\\phi](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cphi "\phi")
+![\phi](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cphi "\phi")
 and the
-![n\\times n](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;n%5Ctimes%20n "n\times n")
+![n\times n](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;n%5Ctimes%20n "n\times n")
 Euclidean distance matrix
 ![D](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;D "D")
 between the cluster locations. The parameters
-![\\sigma^2\_\\omega](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csigma%5E2_%5Comega "\sigma^2_\omega")
+![\sigma^2\_\omega](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csigma%5E2_%5Comega "\sigma^2_\omega")
 and
-![\\phi](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cphi "\phi")
+![\phi](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cphi "\phi")
 are unknown and are to be estimated in INLA. The iid random effects
 follow a normal distribution with a mean of zero and an unknown variance
-![\\sigma^2\_\\epsilon](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csigma%5E2_%5Cepsilon "\sigma^2_\epsilon")
+![\sigma^2\_\epsilon](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Csigma%5E2_%5Cepsilon "\sigma^2_\epsilon")
 which will be estimated along with the other parameters mentioned above.
 
 Additional components must be constructed before fitting the model in
@@ -170,20 +158,17 @@ in the modelling R script (i.e., with the same (sub)set of geospatial
 covariates) for the target indicator. For each fold, the following
 evaluation metrics are calculated:
 
-![
-\\begin{align\*}
-\\rho(\\hat{\\mathbf{p}}\_i, \\mathbf{p}), \\\\
+![\begin{align\*}
+\rho(\hat{\mathbf{p}}\_i, \mathbf{p}), \\\\
 \\\\
-\\sqrt{\\frac{1}{n\_{\\rm test}}\\sum^{n\_{\\rm test}}\_{i=1}(\\hat{p}\_i - p_i)^2}, \\\\
+\sqrt{\frac{1}{n\_{\rm test}}\sum^{n\_{\rm test}}\_{i=1}(\hat{p}\_i - p_i)^2}, \\\\
 \\\\
-\\frac{1}{n\_{\\rm test}}\\sum^{n\_{\\rm test}}\_{i=1}\|\\hat{p}\_i - p_i\|, \\\\
+\frac{1}{n\_{\rm test}}\sum^{n\_{\rm test}}\_{i=1}\|\hat{p}\_i - p_i\|, \\\\
 \\\\
-\\bigg( \\frac{\\sum\_{i=1}^{n\_{\\rm test}}(\\hat{p}\_i - p_i)}{\\sum\_{j=1}^{n\_{\\rm test}}p_j}  \\bigg) \\times 100, \\\\
+\bigg( \frac{\sum\_{i=1}^{n\_{\rm test}}(\hat{p}\_i - p_i)}{\sum\_{j=1}^{n\_{\rm test}}p_j}  \bigg) \times 100, \\\\
 \\\\
-\\bigg(\\frac{1}{n\_{\\rm test}}\\sum^{n\_{\\rm test}}\_{i=1}C_i\\bigg)\\times 100,
-\\end{align\*}
-](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%0A%5Cbegin%7Balign%2A%7D%0A%5Crho%28%5Chat%7B%5Cmathbf%7Bp%7D%7D_i%2C%20%5Cmathbf%7Bp%7D%29%2C%20%5C%5C%0A%5C%5C%0A%5Csqrt%7B%5Cfrac%7B1%7D%7Bn_%7B%5Crm%20test%7D%7D%5Csum%5E%7Bn_%7B%5Crm%20test%7D%7D_%7Bi%3D1%7D%28%5Chat%7Bp%7D_i%20-%20p_i%29%5E2%7D%2C%20%5C%5C%0A%5C%5C%0A%5Cfrac%7B1%7D%7Bn_%7B%5Crm%20test%7D%7D%5Csum%5E%7Bn_%7B%5Crm%20test%7D%7D_%7Bi%3D1%7D%7C%5Chat%7Bp%7D_i%20-%20p_i%7C%2C%20%5C%5C%0A%5C%5C%0A%5Cbigg%28%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5E%7Bn_%7B%5Crm%20test%7D%7D%28%5Chat%7Bp%7D_i%20-%20p_i%29%7D%7B%5Csum_%7Bj%3D1%7D%5E%7Bn_%7B%5Crm%20test%7D%7Dp_j%7D%20%20%5Cbigg%29%20%5Ctimes%20100%2C%20%5C%5C%0A%5C%5C%0A%5Cbigg%28%5Cfrac%7B1%7D%7Bn_%7B%5Crm%20test%7D%7D%5Csum%5E%7Bn_%7B%5Crm%20test%7D%7D_%7Bi%3D1%7DC_i%5Cbigg%29%5Ctimes%20100%2C%0A%5Cend%7Balign%2A%7D%0A "
-\begin{align*}
+\bigg(\frac{1}{n\_{\rm test}}\sum^{n\_{\rm test}}\_{i=1}C_i\bigg)\times 100,
+\end{align\*}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cbegin%7Balign%2A%7D%0A%5Crho%28%5Chat%7B%5Cmathbf%7Bp%7D%7D_i%2C%20%5Cmathbf%7Bp%7D%29%2C%20%5C%5C%0A%5C%5C%0A%5Csqrt%7B%5Cfrac%7B1%7D%7Bn_%7B%5Crm%20test%7D%7D%5Csum%5E%7Bn_%7B%5Crm%20test%7D%7D_%7Bi%3D1%7D%28%5Chat%7Bp%7D_i%20-%20p_i%29%5E2%7D%2C%20%5C%5C%0A%5C%5C%0A%5Cfrac%7B1%7D%7Bn_%7B%5Crm%20test%7D%7D%5Csum%5E%7Bn_%7B%5Crm%20test%7D%7D_%7Bi%3D1%7D%7C%5Chat%7Bp%7D_i%20-%20p_i%7C%2C%20%5C%5C%0A%5C%5C%0A%5Cbigg%28%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5E%7Bn_%7B%5Crm%20test%7D%7D%28%5Chat%7Bp%7D_i%20-%20p_i%29%7D%7B%5Csum_%7Bj%3D1%7D%5E%7Bn_%7B%5Crm%20test%7D%7Dp_j%7D%20%20%5Cbigg%29%20%5Ctimes%20100%2C%20%5C%5C%0A%5C%5C%0A%5Cbigg%28%5Cfrac%7B1%7D%7Bn_%7B%5Crm%20test%7D%7D%5Csum%5E%7Bn_%7B%5Crm%20test%7D%7D_%7Bi%3D1%7DC_i%5Cbigg%29%5Ctimes%20100%2C%0A%5Cend%7Balign%2A%7D "\begin{align*}
 \rho(\hat{\mathbf{p}}_i, \mathbf{p}), \\
 \\
 \sqrt{\frac{1}{n_{\rm test}}\sum^{n_{\rm test}}_{i=1}(\hat{p}_i - p_i)^2}, \\
@@ -193,8 +178,7 @@ evaluation metrics are calculated:
 \bigg( \frac{\sum_{i=1}^{n_{\rm test}}(\hat{p}_i - p_i)}{\sum_{j=1}^{n_{\rm test}}p_j}  \bigg) \times 100, \\
 \\
 \bigg(\frac{1}{n_{\rm test}}\sum^{n_{\rm test}}_{i=1}C_i\bigg)\times 100,
-\end{align*}
-")
+\end{align*}")
 
 the Pearson’s correlation coefficient, the root mean squared error, the
 mean absolute error, percentage bias, and the coverage rate. In the
@@ -202,29 +186,25 @@ evaluate metrics above,
 ![p_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;p_i "p_i")
 is used to denote the observed values – i.e., the proportions of the
 target indicators partitioned for testing – and
-![\\hat{p}\_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%7Bp%7D_i "\hat{p}_i")
+![\hat{p}\_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%7Bp%7D_i "\hat{p}_i")
 is used to denote the predicted mean values from the Bayesian
 point-referenced spatial binomial generalized linear model.
 
 The notation
-![\\rho(\\cdot)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Crho%28%5Ccdot%29 "\rho(\cdot)")
+![\rho(\cdot)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Crho%28%5Ccdot%29 "\rho(\cdot)")
 is used to the denote the Pearson’s correlation coefficient where
 explicitly it is calculated with the covariance of the observed and
 predicted values, and the standard deviation of the observed and
 predicted values
 
-![
-\\rho(\\hat{\\mathbf{p}}\_i, \\mathbf{p}) = \\frac{\\textrm{cov}(\\hat{\\mathbf{p}}\_i, \\mathbf{p})}{\\sigma\_{\\bf \\hat{p}}\\sigma\_{\\bf p}}
-](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%0A%5Crho%28%5Chat%7B%5Cmathbf%7Bp%7D%7D_i%2C%20%5Cmathbf%7Bp%7D%29%20%3D%20%5Cfrac%7B%5Ctextrm%7Bcov%7D%28%5Chat%7B%5Cmathbf%7Bp%7D%7D_i%2C%20%5Cmathbf%7Bp%7D%29%7D%7B%5Csigma_%7B%5Cbf%20%5Chat%7Bp%7D%7D%5Csigma_%7B%5Cbf%20p%7D%7D%0A "
-\rho(\hat{\mathbf{p}}_i, \mathbf{p}) = \frac{\textrm{cov}(\hat{\mathbf{p}}_i, \mathbf{p})}{\sigma_{\bf \hat{p}}\sigma_{\bf p}}
-")
+![\rho(\hat{\mathbf{p}}\_i, \mathbf{p}) = \frac{\textrm{cov}(\hat{\mathbf{p}}\_i, \mathbf{p})}{\sigma\_{\bf \hat{p}}\sigma\_{\bf p}}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Crho%28%5Chat%7B%5Cmathbf%7Bp%7D%7D_i%2C%20%5Cmathbf%7Bp%7D%29%20%3D%20%5Cfrac%7B%5Ctextrm%7Bcov%7D%28%5Chat%7B%5Cmathbf%7Bp%7D%7D_i%2C%20%5Cmathbf%7Bp%7D%29%7D%7B%5Csigma_%7B%5Cbf%20%5Chat%7Bp%7D%7D%5Csigma_%7B%5Cbf%20p%7D%7D "\rho(\hat{\mathbf{p}}_i, \mathbf{p}) = \frac{\textrm{cov}(\hat{\mathbf{p}}_i, \mathbf{p})}{\sigma_{\bf \hat{p}}\sigma_{\bf p}}")
 
 Here, note that the vectors
-![\\hat{\\mathbf{p}} = (\\hat{p}\_1, \\dots, \\hat{p}\_n)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%7B%5Cmathbf%7Bp%7D%7D%20%3D%20%28%5Chat%7Bp%7D_1%2C%20%5Cdots%2C%20%5Chat%7Bp%7D_n%29 "\hat{\mathbf{p}} = (\hat{p}_1, \dots, \hat{p}_n)")
+![\hat{\mathbf{p}} = (\hat{p}\_1, \dots, \hat{p}\_n)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%7B%5Cmathbf%7Bp%7D%7D%20%3D%20%28%5Chat%7Bp%7D_1%2C%20%5Cdots%2C%20%5Chat%7Bp%7D_n%29 "\hat{\mathbf{p}} = (\hat{p}_1, \dots, \hat{p}_n)")
 and
-![\\mathbf{p} = (p_1, \\dots, p_n)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmathbf%7Bp%7D%20%3D%20%28p_1%2C%20%5Cdots%2C%20p_n%29 "\mathbf{p} = (p_1, \dots, p_n)")
+![\mathbf{p} = (p_1, \dots, p_n)](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Cmathbf%7Bp%7D%20%3D%20%28p_1%2C%20%5Cdots%2C%20p_n%29 "\mathbf{p} = (p_1, \dots, p_n)")
 where
-![n\_{\\rm test}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;n_%7B%5Crm%20test%7D "n_{\rm test}")
+![n\_{\rm test}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;n_%7B%5Crm%20test%7D "n_{\rm test}")
 is the number of observations partitioned for testing. Better predictive
 performance is reflected from a greater Pearson’s correlation
 coefficient. The root mean squared error (RMSE), mean absolute error
@@ -235,29 +215,25 @@ coverage rate which ranges from 0 to 100. First,
 ![C_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;C_i "C_i")
 in the equation is defined as follow
 
-![
-C_i = 
-\\begin{cases}
-1 \\hspace{0.5cm} \\textrm{if} \\hspace{0.3cm} \\hat{p}\_{i\\ 0.025q} \< p_i \< \\hat{p}\_{i\\ 0.975q}, \\\\
-0 \\hspace{0.5cm} \\textrm{otherwise},
-\\end{cases}
-](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%0AC_i%20%3D%20%0A%5Cbegin%7Bcases%7D%0A1%20%5Chspace%7B0.5cm%7D%20%5Ctextrm%7Bif%7D%20%5Chspace%7B0.3cm%7D%20%5Chat%7Bp%7D_%7Bi%5C%200.025q%7D%20%3C%20p_i%20%3C%20%5Chat%7Bp%7D_%7Bi%5C%200.975q%7D%2C%20%5C%5C%0A0%20%5Chspace%7B0.5cm%7D%20%5Ctextrm%7Botherwise%7D%2C%0A%5Cend%7Bcases%7D%0A "
-C_i = 
+![C_i = 
+\begin{cases}
+1 \hspace{0.5cm} \textrm{if} \hspace{0.3cm} \hat{p}\_{i\\ 0.025q} \< p_i \< \hat{p}\_{i\\ 0.975q}, \\\\
+0 \hspace{0.5cm} \textrm{otherwise},
+\end{cases}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;C_i%20%3D%20%0A%5Cbegin%7Bcases%7D%0A1%20%5Chspace%7B0.5cm%7D%20%5Ctextrm%7Bif%7D%20%5Chspace%7B0.3cm%7D%20%5Chat%7Bp%7D_%7Bi%5C%200.025q%7D%20%3C%20p_i%20%3C%20%5Chat%7Bp%7D_%7Bi%5C%200.975q%7D%2C%20%5C%5C%0A0%20%5Chspace%7B0.5cm%7D%20%5Ctextrm%7Botherwise%7D%2C%0A%5Cend%7Bcases%7D "C_i = 
 \begin{cases}
 1 \hspace{0.5cm} \textrm{if} \hspace{0.3cm} \hat{p}_{i\ 0.025q} < p_i < \hat{p}_{i\ 0.975q}, \\
 0 \hspace{0.5cm} \textrm{otherwise},
-\end{cases}
-")
+\end{cases}")
 
 where
-![\\hat{p}\_{i\\ 0.025q}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%7Bp%7D_%7Bi%5C%200.025q%7D "\hat{p}_{i\ 0.025q}")
+![\hat{p}\_{i\\ 0.025q}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%7Bp%7D_%7Bi%5C%200.025q%7D "\hat{p}_{i\ 0.025q}")
 and
-![\\hat{p}\_{i\\ 0.975q}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%7Bp%7D_%7Bi%5C%200.975q%7D "\hat{p}_{i\ 0.975q}")
+![\hat{p}\_{i\\ 0.975q}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;%5Chat%7Bp%7D_%7Bi%5C%200.975q%7D "\hat{p}_{i\ 0.975q}")
 represents the ith 0.025 quantile and 0.0975 quantile predicted value.
 To put it simply,
 ![C_i](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;C_i "C_i")
 is either 1 or 0, for
-![i = 1,\\dots,n\_{\\rm test}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;i%20%3D%201%2C%5Cdots%2Cn_%7B%5Crm%20test%7D "i = 1,\dots,n_{\rm test}"),
+![i = 1,\dots,n\_{\rm test}](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;i%20%3D%201%2C%5Cdots%2Cn_%7B%5Crm%20test%7D "i = 1,\dots,n_{\rm test}"),
 depending on some condition. This condition is if the observed value is
 within the 0.025 quantile and 0.0975 quantile of the predicted value,
 ![C_i = 1](https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D&space;%5Cbg_white&space;C_i%20%3D%201 "C_i = 1"),
@@ -288,7 +264,8 @@ Southampton (ERGO 64920).
 Chan, H.M.T, Dreoni, I., Tejedor-Garavito, N., Kerr D., Bonnie, A.,
 Tatem A.J. and Pezzulo, C. 2022. health_dev: Subnational reproductive,
 maternal, newborn, child and adolescent health and development atlas for
-India, version 1.0. WorldPop, University of Southampton. doi: XXX.
+India, version 1.0. WorldPop, University of Southampton. doi:
+[10.5281/zenodo.6907191](https://zenodo.org/badge/511118399.svg).
 
 # Reference
 
