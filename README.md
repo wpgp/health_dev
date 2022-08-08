@@ -1,5 +1,5 @@
 health_dev: Subnational reproductive, maternal, newborn, child and
-adolescent health and development atlas for India, version 1.0
+adolescent health and development atlas for India, version 1.1
 ================
 2022-07-26
 
@@ -264,8 +264,8 @@ Southampton (ERGO 64920).
 Chan, H.M.T, Dreoni, I., Tejedor-Garavito, N., Kerr D., Bonnie, A.,
 Tatem A.J. and Pezzulo, C. 2022. health_dev: Subnational reproductive,
 maternal, newborn, child and adolescent health and development atlas for
-India, version 1.0. WorldPop, University of Southampton. doi:
-[10.5281/zenodo.6907191](https://zenodo.org/badge/511118399.svg).
+India, version 1.1. WorldPop, University of Southampton.
+[![DOI](https://zenodo.org/badge/511118399.svg)](https://zenodo.org/badge/latestdoi/511118399).
 
 # Reference
 
